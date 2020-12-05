@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_155sdp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/_5sdp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:src="@drawable/default_song_album_art"
+        android:scaleType="centerCrop"
+        android:id="@+id/singleArtistImage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/singleArtistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Name"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/singleArtistSongCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2 Songs"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/colorLightGray"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+</LinearLayout>

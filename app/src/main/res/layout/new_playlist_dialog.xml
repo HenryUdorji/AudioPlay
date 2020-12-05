@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_drawable"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_playlist"
+        android:id="@+id/dialogTitle"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/playlist_name"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorLightGray"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:id="@+id/playlistName"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create"
+        android:background="@drawable/btn_drawable"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:id="@+id/createPlaylistBtn"/>
+</LinearLayout>

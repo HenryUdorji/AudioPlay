@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_210sdp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/default_song_album_art"
+        android:scaleType="centerCrop"
+        android:id="@+id/singleAlbumImage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/singleAlbumName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Name"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/singleAlbumArtistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Name"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/colorLightGray"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+</LinearLayout>

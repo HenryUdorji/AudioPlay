@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_drawable"
+    android:layout_gravity="center">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:background="@null"
+        android:id="@+id/dialogCloseBtn"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/_10sdp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/developer_image"
+        android:id="@+id/dialogImage"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Udorji  Henry"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_below="@+id/dialogImage"
+        android:id="@+id/dialogTitle"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Software Developer"
+        android:textColor="@color/colorLightGray"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:layout_below="@+id/dialogTitle"
+        android:id="@+id/dialogSubTitle"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hi there I hope you really enjoy using this app"
+        android:textColor="@color/colorLightGray"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:layout_below="@+id/dialogSubTitle"
+        android:id="@+id/dialogDescription"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/colorAccent"
+        android:id="@+id/view"
+        android:layout_below="@id/dialogDescription"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check my social media"
+        android:textColor="@color/colorLightGray"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@drawable/linked_in"
+                android:background="@null"
+                android:id="@+id/dialogLinkedInBtn"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@drawable/whatsapp"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/dialogWhatsAppBtn"
+                android:padding="@dimen/_10sdp"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@drawable/twitter"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/dialogTwitterBtn"
+                android:padding="@dimen/_10sdp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

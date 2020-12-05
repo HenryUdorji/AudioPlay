@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:id="@+id/nav_playlist"
+        android:title="@string/playlist"
+        android:icon="@drawable/ic_playlist"/>-->
+
+    <item android:id="@+id/nav_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"/>
+
+    <item android:id="@+id/nav_feedback"
+        android:title="@string/feedback"
+        android:icon="@drawable/ic_feedback"/>
+
+    <item android:id="@+id/nav_about"
+        android:title="@string/about_app"
+        android:icon="@drawable/ic_about_app"/>
+
+    <item android:id="@+id/nav_rate_app"
+        android:title="@string/rate_app"
+        android:icon="@drawable/ic_rate_app"/>
+</menu>

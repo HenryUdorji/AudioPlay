@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_drawable"
+    android:layout_gravity="center">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:background="@null"
+        android:id="@+id/dialogCloseBtn"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_language"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogCloseBtn"
+        android:id="@+id/languageRadioGroup"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:id="@+id/englishRBtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="French"
+            android:id="@+id/frenchRBtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spanish"
+            android:id="@+id/spanishRBtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mandarin Chinese"
+            android:id="@+id/mandarinChinese"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp" />
+    </RadioGroup>
+
+
+</RelativeLayout>

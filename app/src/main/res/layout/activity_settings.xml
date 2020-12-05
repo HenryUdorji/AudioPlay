@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/timer"
+                tools:ignore="NotSibling">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Timer"
+                    android:id="@+id/timerText"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Close AudioPlay when timer stops"
+                    android:layout_below="@+id/timerText"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="@dimen/_11ssp"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timerSwitch"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/timerText"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:id="@+id/timerLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minutes"
+                        android:textColor="@color/colorLightGray"
+                        android:textSize="@dimen/_13ssp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.travijuu.numberpicker.library.NumberPicker
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/timerNumPicker"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:custom_layout="@layout/number_picker_layout"
+                            app:focusable="false"
+                            app:max="60"
+                            app:min="10"
+                            app:unit="10"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="60:00"
+                            android:id="@+id/countDownText"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timer"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/crossFade">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CrossFade"
+                    android:id="@+id/crossFadeText"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Set crossFade between pause and play."
+                    android:layout_below="@+id/crossFadeText"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="@dimen/_11ssp"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crossFadeSwitch"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/crossFadeText"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:id="@+id/numberLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seconds"
+                        android:textColor="@color/colorLightGray"
+                        android:textSize="@dimen/_13ssp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <com.travijuu.numberpicker.library.NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numberPicker"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:custom_layout="@layout/number_picker_layout"
+                        app:focusable="false"
+                        app:max="15"
+                        app:min="3"
+                        app:unit="3"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/crossFade"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:id="@+id/visualizerLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/visualizerText"
+                    android:id="@+id/styleLayout"
+                    tools:ignore="UnknownId">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Visualizer Style"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wave"
+                        android:id="@+id/visualizer"
+                        android:textColor="@color/colorLightGray"
+                        android:textSize="@dimen/_12ssp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/visualizerLayout"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:id="@+id/mode"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Theme"
+                    android:id="@+id/themeText"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dark"
+                    android:id="@+id/theme"
+                    android:layout_below="@+id/themeText"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="@dimen/_11ssp"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/themeSwitch"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mode"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:id="@+id/LanguageLayout"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/the"
+                    android:id="@+id/langLayout"
+                    tools:ignore="UnknownId">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Language"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="English"
+                        android:id="@+id/languageText"
+                        android:textColor="@color/colorLightGray"
+                        android:textSize="@dimen/_12ssp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+
+
